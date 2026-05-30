@@ -44,30 +44,28 @@
 
     <main class="site-main container">
         <section class="site-content">
-            <% posts?.forEach(item=> { %>
                 <article class="post">
                     <h2 class="post-title">
-                        <a href="/<%= item.post_name %>">
-                            <%= item.title %>
+                        <a href="/<%= post.post_name %>">
+                            <%= post.title %>
                         </a>
                     </h2>
                     <div class="post-meta">
-                        <span class="author">By <%= item.author %></span>
-                        <time>on <%= item.post_date %></time>
+                        <span class="author">By <%= post.author %></span>
+                        <time>on <%= post.post_date %></time>
                     </div>
-                    <p><%- item.content %></p>
+                    <p><%- post.content %></p>
                 </article>
-                <% }) %>
         </section>
     </main>
 
     <nav class="post-navigation container">
-            <a href="https://johanneskalma.nl/pecannoten/" class="nav-previous">Pecannoten</a>
-            <a href="https://johanneskalma.nl/en-ondertussen-gaat-het-op-de-wc-over-quantumcomputers/"
-                    class="nav-next">En ondertussen gaat het op de wc over quantumcomputers.</a>
+        <% if (post.previousPost) { %>
+            <a href="/<%= post.previousPost.post_name %>" class="nav-previous"><%= post.previousPost.title %></a>
+        <% } %>        <% if (post.nextPost) { %>
+            <a href="/<%= post.nextPost.post_name %>" class="nav-next"><%= post.nextPost.title %></a>
+        <% } %>
     </nav>
-
-
 
 </body>
 

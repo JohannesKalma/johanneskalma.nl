@@ -23,9 +23,24 @@ const jsonData = async () => {
 }
 
 const mapItems = async (items) => {
- 
-    const postsArray = items
+
+    const post = items
         .map(post => ({
+
+        }))
+    return postsArray;
+}
+
+const singlePost = async (slug) => {
+    try {
+        const posts = await jsonData();
+        const postIndex = posts.findIndex((item) => item['wp:post_name'] === slug);
+
+        const post = posts[postIndex];
+        const previousPost = posts[postIndex - 1]; // Left neighbor
+        const nextPost = posts[postIndex + 1]; // Right neighbor
+
+        const postData = {
             title: post.title,
             post_date: post['wp:post_date'],
             author: post['dc:creator'],
@@ -33,28 +48,17 @@ const mapItems = async (items) => {
             post_name: post['wp:post_name'],
             link: post.link,
             content: post['content:encoded'] || '',
-        }))
-    return postsArray;
-}
-
-const singlePost = async (slug) => {
-    try {
-        const items = await jsonData();
-        console.log(`Looking for post with slug: ${slug}`);
-        console.log(`Total posts available: ${items.length}`);
-        //console.log(items[1]); // Log the second item to check structure (adjust index as needed)
-        let post = items.find(item => item['wp:post_name'] === slug);
-        console.log('Found post:', post);
-        if (!post) {
-            //throw createError(404, `Post with slug ${slug} not found.`);
-            return null; // Return null if not found, the calling code can handle this case
+            previousPost: previousPost ? {
+                title: previousPost.title,
+                post_name: previousPost['wp:post_name']
+            } : null,
+            nextPost: nextPost ? {
+                title: nextPost.title,
+                post_name: nextPost['wp:post_name']
+            } : null
         }
-
-        post = [post]; // Wrap in array to reuse mapItems logic for consistent structure
-        console.log('Found post for slug:', slug);
-        const mappedPost = await mapItems(post);
-        console.log('Mapped post data:', mappedPost); 
-        return mappedPost; // Return the single post object or null if not found
+        console.log(`Post data for slug "${slug}":`, postData); // Debug log to verify the structure of postData
+        return postData; // Return the single post object or null if not found
     }
     catch (error) {
         console.error("Failed to process single post data:", error);
@@ -64,18 +68,13 @@ const singlePost = async (slug) => {
 }
 
 router.get('/', async (req, res, next) => {
-    //try {
     const postSlug = req.params.slug;
-        console.log('SLUG');
-        const postData = await singlePost(req.params.slug);
-         if (!postData) {
-            next(); // Pass control to the next middleware (which should be the 404 handler)
-            return; // Ensure we don't continue to render if postData is null
-        }
-        res.render('post', {title:"My Blog", posts: postData });
-    //} catch (error) {
-      //  next(error); // Pass the error to the global error handler
-    //}
-    })
+    const postData = await singlePost(req.params.slug);
+    if (!postData) {
+        next(); // Pass control to the next middleware (which should be the 404 handler)
+        return; // Ensure we don't continue to render if postData is null
+    }
+    res.render('post', { title: "My Blog", post: postData });
+});
 
 export default router;
