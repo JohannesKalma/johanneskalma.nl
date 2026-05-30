@@ -105,7 +105,7 @@ router.get('/', async (req, res) => {
     });
 });
 
-router.get('/page/:page', async (req, res) => {
+router.get('/:page', async (req, res) => {
     const page = parseInt(req.params.page, 10);
     const paginationData = await Pagination(page);
     const postData = await frontpageData(page);
