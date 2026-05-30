@@ -1,12 +1,12 @@
+import 'dotenv/config';
 import fs from 'fs';
 import express from 'express';
 import morgan from 'morgan';
 import createError from 'http-errors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import dotenv from 'dotenv';
 
-dotenv.config();
+//dotenv.config();
 
 const app = express();
 const PORT = 3335;
