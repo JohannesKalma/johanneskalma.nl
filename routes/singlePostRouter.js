@@ -2,7 +2,7 @@ import { Router } from 'express'
 import fs from 'fs';
 const router = Router({ mergeParams: true })
 
-const dataFileBasePath = '/home/jkalma/Git/johanneskalma.nl/wp-export/split_output/';
+const dataFileBasePath = process.env.DATA_FILE_BASEPATH;
 const dataFilePath = `${dataFileBasePath}post.json`;
 
 const fileData = async () => {
