@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Rivera | Personal Homepage</title>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            /* Softer header white */
+            --text-header: #e0e0e0; 
+            /* Brighter, more readable paragraph grey */
+            --text-body: #c0c0c0; 
+            --text-muted: #888888;
+            --border-color: #2a2a2a;
+            --card-bg: #161616;
+            --hover-bg: #1c1c1c;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-body);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+
+        header {
+            margin-bottom: 50px;
+        }
+
+        h1, h2, h3 {
+            color: var(--text-header);
+            font-weight: 600;
+            margin-top: 0;
+        }
+
+        h1 { font-size: 2.2rem; letter-spacing: -0.5px; margin-bottom: 12px; }
+        h2 { font-size: 1.3rem; margin-top: 45px; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 18px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+        }
+
+        .card strong {
+            color: var(--text-header);
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 24px;
+            border-left: 2px solid var(--border-color);
+            transition: all 0.2s ease-in-out;
+            text-decoration: none;
+            display: block;
+            color: inherit;
+        }
+
+        .blog-post:hover {
+            background: var(--hover-bg);
+            border-left-color: var(--text-muted);
+        }
+
+        .blog-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .blog-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-header);
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .tag {
+            border: 1px solid var(--border-color);
+            padding: 4px 12px;
+            font-size: 0.85rem;
+            color: var(--text-body);
+            border-radius: 20px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .social-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .social-link:hover {
+            color: var(--text-header);
+        }
+
+        @media (max-width: 600px) {
+            .profile-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Alex Rivera</h1>
+        <p style="font-size: 1.1rem; color: var(--text-header);">Senior Designer & Digital Architect</p>
+        <p>I build systems that bridge the gap between complex data and human intuition. Based in Seattle, specializing in high-performance digital interfaces.</p>
+    </header>
+
+    <section>
+        <h2>The Basics</h2>
+        <div class="profile-grid">
+            <div class="card">
+                <strong>Current Role</strong>
+                <span>Senior Product Designer @ TechFlow</span>
+            </div>
+            <div class="card">
+                <strong>Education</strong>
+                <span>B.S. in Computer Science</span>
+            </div>
+            <div class="card">
+                <strong>Focus</strong>
+                <span>Interface Psychology, UX Strategy</span>
+            </div>
+            <div class="card">
+                <strong>Contact</strong>
+                <span>alex.rivera@email.com</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Writing</h2>
+        
+        <a href="#" class="blog-post">
+            <div class="blog-date">May 12, 2026</div>
+            <div class="blog-title">The Art of Minimalist Productivity</div>
+            <p>Efficiency isn't about doing more; it's about removing the things that don't need to be done at all.</p>
+        </a>
+
+        <a href="#" class="blog-post">
+            <div class="blog-date">April 28, 2026</div>
+            <div class="blog-title">Why We Need Slower Technology</div>
+            <p>As AI accelerates our output, the value of "slow thought" becomes a premium. Designing intentional friction.</p>
+        </a>
+    </section>
+
+    <section>
+        <h2>Toolkit</h2>
+        <ul class="tags">
+            <li class="tag">Figma</li>
+            <li class="tag">Python</li>
+            <li class="tag">React</li>
+            <li class="tag">Obsidian</li>
+            <li class="tag">Tailwind</li>
+        </ul>
+    </section>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" class="social-link">Twitter/X</a>
+            <a href="#" class="social-link">GitHub</a>
+            <a href="#" class="social-link">LinkedIn</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>

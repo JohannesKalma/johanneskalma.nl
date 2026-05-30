@@ -1,0 +1,378 @@
+[
+  {
+    "title": "Sample Page",
+    "link": "https://johanneskalma.nl/sample-page/",
+    "pubDate": "Tue, 01 Aug 2017 12:32:26 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "http://johanneskalma.nl/?page_id=2",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "This is an example page. It's different from a blog post because it will stay in one place and will show up in your site navigation (in most themes). Most people start with an About page that introduces them to potential site visitors. It might say something like this:\n\n<blockquote>Hi there! I'm a bike messenger by day, aspiring actor by night, and this is my website. I live in Los Angeles, have a great dog named Jack, and I like pi&#241;a coladas. (And gettin' caught in the rain.)</blockquote>\n\n...or something like this:\n\n<blockquote>The XYZ Doohickey Company was founded in 1971, and has been providing quality doohickeys to the public ever since. Located in Gotham City, XYZ employs over 2,000 people and does all kinds of awesome things for the Gotham community.</blockquote>\n\nAs a new WordPress user, you should go to <a href=\"http://johanneskalma.nl/wp-admin/\">your dashboard</a> to delete this page and create new pages for your content. Have fun!",
+    "excerpt:encoded": "",
+    "wp:post_id": 2,
+    "wp:post_date": "2017-08-01 12:32:26",
+    "wp:post_date_gmt": "2017-08-01 12:32:26",
+    "wp:post_modified": "2017-08-01 12:32:26",
+    "wp:post_modified_gmt": "2017-08-01 12:32:26",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "open",
+    "wp:post_name": "sample-page",
+    "wp:status": "publish",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_wp_page_template",
+        "wp:meta_value": "default"
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      }
+    ]
+  },
+  {
+    "title": "Home",
+    "link": "https://johanneskalma.nl/home/",
+    "pubDate": "Tue, 17 Apr 2018 20:36:52 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=245",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "dummy",
+    "excerpt:encoded": "",
+    "wp:post_id": 245,
+    "wp:post_date": "2018-04-17 20:36:52",
+    "wp:post_date_gmt": "2018-04-17 20:36:52",
+    "wp:post_modified": "2018-04-17 20:36:52",
+    "wp:post_modified_gmt": "2018-04-17 20:36:52",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "home",
+    "wp:status": "publish",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_edit_last",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_wp_page_template",
+        "wp:meta_value": "default"
+      },
+      {
+        "wp:meta_key": "_publicize_pending",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      }
+    ]
+  },
+  {
+    "title": "Blog",
+    "link": "https://johanneskalma.nl/blog/",
+    "pubDate": "Tue, 17 Apr 2018 20:37:11 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=247",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "dummy",
+    "excerpt:encoded": "",
+    "wp:post_id": 247,
+    "wp:post_date": "2018-04-17 20:37:11",
+    "wp:post_date_gmt": "2018-04-17 20:37:11",
+    "wp:post_modified": "2018-04-17 20:37:11",
+    "wp:post_modified_gmt": "2018-04-17 20:37:11",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "blog",
+    "wp:status": "publish",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_edit_last",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_wp_page_template",
+        "wp:meta_value": "default"
+      },
+      {
+        "wp:meta_key": "_publicize_pending",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      }
+    ]
+  },
+  {
+    "title": "Componenten in dit Thema",
+    "link": "https://johanneskalma.nl/?page_id=249",
+    "pubDate": "",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=249",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "",
+    "excerpt:encoded": "",
+    "wp:post_id": 249,
+    "wp:post_date": "2022-07-27 08:31:10",
+    "wp:post_date_gmt": "0000-00-00 00:00:00",
+    "wp:post_modified": "2022-07-27 08:31:10",
+    "wp:post_modified_gmt": "2022-07-27 07:31:10",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "",
+    "wp:status": "draft",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_wp_page_template",
+        "wp:meta_value": "page-components.php"
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      }
+    ]
+  },
+  {
+    "title": "Componenten in dit Thema",
+    "link": "https://johanneskalma.nl/componenten-in-dit-thema/",
+    "pubDate": "Tue, 17 Apr 2018 20:41:51 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/componenten-in-dit-thema/",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "",
+    "excerpt:encoded": "",
+    "wp:post_id": 250,
+    "wp:post_date": "2018-04-17 20:41:51",
+    "wp:post_date_gmt": "2018-04-17 20:41:51",
+    "wp:post_modified": "2018-04-17 20:41:51",
+    "wp:post_modified_gmt": "2018-04-17 20:41:51",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "componenten-in-dit-thema",
+    "wp:status": "publish",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_publicize_pending",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_wp_page_template",
+        "wp:meta_value": "page-components.php"
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      }
+    ]
+  },
+  {
+    "title": "Kleur Demo",
+    "link": "https://johanneskalma.nl/kleur-demo/",
+    "pubDate": "Wed, 25 Apr 2018 21:26:24 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=282",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "dummy",
+    "excerpt:encoded": "",
+    "wp:post_id": 282,
+    "wp:post_date": "2018-04-25 22:26:24",
+    "wp:post_date_gmt": "2018-04-25 21:26:24",
+    "wp:post_modified": "2018-04-25 22:26:24",
+    "wp:post_modified_gmt": "2018-04-25 21:26:24",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "kleur-demo",
+    "wp:status": "publish",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_edit_last",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_wp_page_template",
+        "wp:meta_value": "page-colors.php"
+      },
+      {
+        "wp:meta_key": "_publicize_pending",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      }
+    ]
+  },
+  {
+    "title": "cheat sheet",
+    "link": "https://johanneskalma.nl/cheat-sheet/",
+    "pubDate": "Tue, 20 Aug 2019 20:24:36 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=702",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "<!-- wp:paragraph -->\n<p>Postfix Mailqueue</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:code -->\n<pre class=\"wp-block-code\"><code>$sudo mailq</code></pre>\n<!-- /wp:code -->\n\n<!-- wp:paragraph -->\n<p>Delete from postfix mailqueue</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:code -->\n<pre class=\"wp-block-code\"><code>$sudo postsuper -d [identifier]</code></pre>\n<!-- /wp:code -->\n\n<!-- wp:paragraph -->\n<p>Read Buffer</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:code -->\n<pre class=\"wp-block-code\"><code>$sudo postcat -vq [identifier]</code></pre>\n<!-- /wp:code -->\n\n<!-- wp:paragraph -->\n<p>Purge <a href=\"https://johanneskalma.nl/packages-marked-as-rc-dpkg-l/\">packages marked as rc (dpkg -l)</a></p>\n<!-- /wp:paragraph -->\n\n<!-- wp:code -->\n<pre class=\"wp-block-code\"><code>$dpkg -l | grep \"^rc\" | cut -d \" \" -f 3 | xargs sudo dpkg --purge</code></pre>\n<!-- /wp:code -->\n\n<!-- wp:paragraph -->\n<p>bunch of jpg’s into animation movie</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:code -->\n<pre class=\"wp-block-code\"><code>ffmpeg -framerate 6 -start_number 1763 -i IMG_%04d.JPG -r 24 -c:v libx264 -crf 20 -pix_fmt yuv420p -vf scale=1920:1080 test-3-6fps-24fps.mp4</code></pre>\n<!-- /wp:code -->\n\n<!-- wp:core-embed/youtube {\"url\":\"https://youtu.be/BSoVys8K0KY\",\"type\":\"video\",\"providerNameSlug\":\"youtube\",\"className\":\"wp-embed-aspect-16-9 wp-has-aspect-ratio\"} -->\n<figure class=\"wp-block-embed-youtube wp-block-embed is-type-video is-provider-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio\"><div class=\"wp-block-embed__wrapper\">\nhttps://youtu.be/BSoVys8K0KY\n</div></figure>\n<!-- /wp:core-embed/youtube -->\n\n<!-- wp:paragraph -->\n<p></p>\n<!-- /wp:paragraph -->",
+    "excerpt:encoded": "",
+    "wp:post_id": 702,
+    "wp:post_date": "2019-08-20 21:24:36",
+    "wp:post_date_gmt": "2019-08-20 20:24:36",
+    "wp:post_modified": "2019-08-20 21:49:47",
+    "wp:post_modified_gmt": "2019-08-20 20:49:47",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "cheat-sheet",
+    "wp:status": "publish",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0,
+    "wp:postmeta": [
+      {
+        "wp:meta_key": "_edit_last",
+        "wp:meta_value": 1
+      },
+      {
+        "wp:meta_key": "_last_editor_used_jetpack",
+        "wp:meta_value": "block-editor"
+      },
+      {
+        "wp:meta_key": "_oembed_bd954a6ea7686b6d21f529722be437b8",
+        "wp:meta_value": "<iframe title=\"Animatie filmpje door Koen en Jitze\" width=\"800\" height=\"450\" src=\"https://www.youtube.com/embed/BSoVys8K0KY?feature=oembed\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
+      },
+      {
+        "wp:meta_key": "_oembed_time_bd954a6ea7686b6d21f529722be437b8",
+        "wp:meta_value": 1730892035
+      }
+    ]
+  },
+  {
+    "title": "Blog",
+    "link": "https://johanneskalma.nl/?page_id=1448",
+    "pubDate": "",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=1448",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "<!-- wp:image {\"align\":\"full\",\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image alignfull size-large\"><img src=\"https://dotcompatterns.files.wordpress.com/2021/02/pexels-photo-3954635.jpeg?w=1024\" alt=\"\" /></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading {\"textAlign\":\"center\",\"level\":1} -->\n<h1 class=\"wp-block-heading has-text-align-center\"><strong>Stel jezelf en je blog voor</strong></h1>\n<!-- /wp:heading -->\n\n<!-- wp:spacer {\"height\":\"30px\"} -->\n<div style=\"height:30px\" aria-hidden=\"true\" class=\"wp-block-spacer\"></div>\n<!-- /wp:spacer -->\n\n<!-- wp:heading {\"textAlign\":\"center\"} -->\n<h2 class=\"wp-block-heading has-text-align-center\">Mijn laatste posts</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\">• • •</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:latest-posts {\"postsToShow\":2,\"displayPostContent\":true,\"excerptLength\":30,\"displayPostDate\":true,\"featuredImageSizeSlug\":\"large\"} /-->\n\n<!-- wp:paragraph {\"align\":\"center\"} -->\n<p class=\"has-text-align-center\">• • •</p>\n<!-- /wp:paragraph -->",
+    "excerpt:encoded": "",
+    "wp:post_id": 1448,
+    "wp:post_date": "2023-05-07 13:59:44",
+    "wp:post_date_gmt": "0000-00-00 00:00:00",
+    "wp:post_modified": "2023-05-07 13:59:44",
+    "wp:post_modified_gmt": "0000-00-00 00:00:00",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "",
+    "wp:status": "draft",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0
+  },
+  {
+    "title": "Terschelling",
+    "link": "https://johanneskalma.nl/?page_id=1449",
+    "pubDate": "Sun, 07 May 2023 13:03:04 +0000",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=1449",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "<!-- wp:image {\"align\":\"center\",\"sizeSlug\":\"large\",\"linkDestination\":\"none\"} -->\n<figure class=\"wp-block-image aligncenter size-large\"><img src=\"https://dotcompatterns.files.wordpress.com/2021/02/pexels-photo-3808904-e1611679248602.jpeg?w=978\" alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:group {\"style\":{\"color\":{\"background\":\"#ffffff\"}}} -->\n<div class=\"wp-block-group has-background\" style=\"background-color:#ffffff\"><!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Over mij</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Stel jezelf voor! Gebruik deze ruimte om 2 of 3 regels te schrijven over jezelf, wat je doet en waar je bent.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:social-links -->\n<ul class=\"wp-block-social-links\"><!-- wp:social-link {\"url\":\"#\",\"service\":\"linkedin\"} /-->\n\n<!-- wp:social-link {\"url\":\"#\",\"service\":\"twitter\"} /-->\n\n<!-- wp:social-link {\"url\":\"#\",\"service\":\"instagram\"} /--></ul>\n<!-- /wp:social-links --></div>\n<!-- /wp:group -->\n\n<!-- wp:list -->\n<ul><!-- wp:list-item -->\n<li></li>\n<!-- /wp:list-item --></ul>\n<!-- /wp:list -->",
+    "excerpt:encoded": "",
+    "wp:post_id": 1449,
+    "wp:post_date": "2023-05-07 14:03:04",
+    "wp:post_date_gmt": "2023-05-07 13:03:04",
+    "wp:post_modified": "2023-05-07 14:03:04",
+    "wp:post_modified_gmt": "2023-05-07 13:03:04",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "",
+    "wp:status": "draft",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0
+  },
+  {
+    "title": "voetreflextherapie-zeist.nl",
+    "link": "https://johanneskalma.nl/?page_id=1557",
+    "pubDate": "",
+    "dc:creator": "knilluz",
+    "guid": {
+      "#text": "https://johanneskalma.nl/?page_id=1557",
+      "@_isPermaLink": "false"
+    },
+    "description": "",
+    "content:encoded": "",
+    "excerpt:encoded": "",
+    "wp:post_id": 1557,
+    "wp:post_date": "2023-08-20 08:01:25",
+    "wp:post_date_gmt": "0000-00-00 00:00:00",
+    "wp:post_modified": "2023-08-20 08:01:25",
+    "wp:post_modified_gmt": "0000-00-00 00:00:00",
+    "wp:comment_status": "closed",
+    "wp:ping_status": "closed",
+    "wp:post_name": "",
+    "wp:status": "draft",
+    "wp:post_parent": 0,
+    "wp:menu_order": 0,
+    "wp:post_type": "page",
+    "wp:post_password": "",
+    "wp:is_sticky": 0
+  }
+]

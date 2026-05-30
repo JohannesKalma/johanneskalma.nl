@@ -1,0 +1,106 @@
+figure.aligncenter{
+    display: flex;
+    justify-content: center;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.7em;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.post h2 a {
+    color: #404040;
+}
+
+.post-meta {
+font-size: 0.75rem;
+    font-weight: 700;
+    margin: 0.75rem 0 0 0;
+    color: #999;
+}
+
+h1.post-title, h2.post-title {
+    margin: 0px;
+}
+
+.container {
+   margin: 3rem auto 2rem auto;
+}
+
+/* 1. Base style for ALL <pre> blocks */
+pre {
+    background-color: #f4f4f4;
+    border-left: 4px solid #666;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* 2. Specific style for <pre> elements that DO NOT contain <code> */
+pre:not(:has(code)) {
+    background-color: #bd9309; /* Warm tint for plain text/logs */
+    border-left-color: #f0b300;
+    font-style: italic;
+}
+
+/* 3. Specific style for <pre> elements that DO contain <code> */
+pre:has(code) {
+    background-color: #5a5a5a; /* Dark mode style for actual code */
+    color: #ececec;
+    border-left-color: #007acc;
+}
+
+code, kbd, pre, samp {
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    font-size: 1em;
+}
+
+nav.pagination, 
+nav.post-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 85%;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    color: inherit;
+    background-color: inherit;
+}
+
+nav.pagination .pagination-left, 
+nav.post-navigation .nav-previous{
+   margin-right: auto;
+}
+
+nav.pagination a.pagination-left::before, 
+nav.post-navigation a.nav-previous::before {
+    content: "\2190\0020";
+}
+
+nav.pagination .pagination-right, 
+nav.post-navigation .nav-next{
+    margin-left: auto;
+}
+
+nav.pagination a.pagination-right, 
+nav.pagination a.pagination-left,
+nav.post-navigation a.nav-next,
+nav.post-navigation a.nav-previous {
+    color: inherit;
+}
+
+nav.pagination a.pagination-right::after, 
+nav.post-navigation a.nav-next::after {
+    content: "\0020\2192";
+}
+
+nav.pagination .pagination-center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.has-background {
+    padding: 10px;
+}

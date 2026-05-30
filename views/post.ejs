@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="icon" href="./images/icon-32x32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://s3.oarsnet.nl/lib/2867/css/2867.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="top-nav">
+            <div class="site-branding">
+                <a href="/">
+                    <%= title %>
+                </a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="/about">About</a></li>
+                <!--<li class="nav-item"><a href="/contact">Contact</a></li>-->
+                <li class="nav-item">
+                    <a href="#">Others ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="https://voetreflextherapie-zeist.nl">Antine Breimer Voetreflextherapie Zeist</a>
+                        <a href="https://u97.nl">U97</a>
+                        <a href="https://knilluz.b5t.nl">Archive</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="site-main container">
+        <section class="site-content">
+            <% posts?.forEach(item=> { %>
+                <article class="post">
+                    <h2 class="post-title">
+                        <a href="/<%= item.post_name %>">
+                            <%= item.title %>
+                        </a>
+                    </h2>
+                    <div class="post-meta">
+                        <span class="author">By <%= item.author %></span>
+                        <time>on <%= item.post_date %></time>
+                    </div>
+                    <p><%- item.content %></p>
+                </article>
+                <% }) %>
+        </section>
+    </main>
+
+    <nav class="post-navigation container">
+            <a href="https://johanneskalma.nl/pecannoten/" class="nav-previous">Pecannoten</a>
+            <a href="https://johanneskalma.nl/en-ondertussen-gaat-het-op-de-wc-over-quantumcomputers/"
+                    class="nav-next">En ondertussen gaat het op de wc over quantumcomputers.</a>
+    </nav>
+
+
+
+</body>
+
+</html>

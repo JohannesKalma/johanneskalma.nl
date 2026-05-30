@@ -1,0 +1,18 @@
+{
+  "title": "Johannes Kalma",
+  "link": "https://johanneskalma.nl",
+  "description": "",
+  "pubDate": "Sat, 16 May 2026 06:29:05 +0000",
+  "language": "en-US",
+  "wp:wxr_version": 1.2,
+  "wp:base_site_url": "https://johanneskalma.nl",
+  "wp:base_blog_url": "https://johanneskalma.nl",
+  "wp:author": {
+    "wp:author_id": 1,
+    "wp:author_login": "knilluz",
+    "wp:author_email": "knilluz@gmail.com",
+    "wp:author_display_name": "knilluz",
+    "wp:author_first_name": "Johannes",
+    "wp:author_last_name": "Kalma"
+  }
+}

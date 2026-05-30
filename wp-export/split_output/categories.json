@@ -1,0 +1,69 @@
+[
+  {
+    "wp:term_id": 22,
+    "wp:category_nicename": "autoradio",
+    "wp:category_parent": "",
+    "wp:cat_name": "Autoradio"
+  },
+  {
+    "wp:term_id": 1,
+    "wp:category_nicename": "common",
+    "wp:category_parent": "",
+    "wp:cat_name": "Common"
+  },
+  {
+    "wp:term_id": 71,
+    "wp:category_nicename": "diabetes",
+    "wp:category_parent": "",
+    "wp:cat_name": "Diabetes"
+  },
+  {
+    "wp:term_id": 52,
+    "wp:category_nicename": "eten",
+    "wp:category_parent": "",
+    "wp:cat_name": "Eten"
+  },
+  {
+    "wp:term_id": 78,
+    "wp:category_nicename": "java",
+    "wp:category_parent": "",
+    "wp:cat_name": "Java"
+  },
+  {
+    "wp:term_id": 10,
+    "wp:category_nicename": "kamperen",
+    "wp:category_parent": "",
+    "wp:cat_name": "Kamperen"
+  },
+  {
+    "wp:term_id": 38,
+    "wp:category_nicename": "linux",
+    "wp:category_parent": "",
+    "wp:cat_name": "Linux"
+  },
+  {
+    "wp:term_id": 72,
+    "wp:category_nicename": "muziek",
+    "wp:category_parent": "",
+    "wp:cat_name": "Muziek"
+  },
+  {
+    "wp:term_id": 77,
+    "wp:category_nicename": "nodejs-project",
+    "wp:category_parent": "",
+    "wp:cat_name": "nodejs project"
+  },
+  {
+    "wp:term_id": 76,
+    "wp:category_nicename": "schotland-2022",
+    "wp:category_parent": "",
+    "wp:cat_name": "Schotland 2022",
+    "wp:category_description": "Verzameling blogberichten van reis naar Schotland in de zomer van 2022"
+  },
+  {
+    "wp:term_id": 70,
+    "wp:category_nicename": "sporten",
+    "wp:category_parent": "",
+    "wp:cat_name": "Sporten"
+  }
+]

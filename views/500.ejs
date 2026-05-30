@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 - Internal Server Error</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: 80px auto; padding: 0 20px; text-align: center; }
+        h1 { font-size: 3rem; color: #d9534f; margin-bottom: 10px; }
+        p { font-size: 1.2rem; color: #555; }
+        .error-box { text-align: left; background: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; font-family: monospace; overflow-x: auto; margin-top: 20px; }
+        .home-btn { display: inline-block; margin-top: 25px; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .home-btn:hover { background: #555; }
+    </style>
+</head>
+<body>
+
+    <h1>500</h1>
+    <h2>Internal Server Error</h2>
+    <p>We are experiencing some technical difficulties. It's not your fault!</p>
+    
+    <% if (error && error.stack) { %>
+        <div class="error-box">
+            <strong>Detailed Error (Visible in Dev Mode):</strong>
+            <pre><%= error.stack %></pre>
+        </div>
+    <% } %>
+
+    <br>
+    <a href="/" class="home-btn">Return to Homepage</a>
+
+</body>
+</html>
