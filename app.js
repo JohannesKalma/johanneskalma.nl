@@ -4,7 +4,6 @@ import morgan from 'morgan';
 import createError from 'http-errors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import wp from './wp-export/wp-filters.js';
 
 const app = express();
 const PORT = 3335;
