@@ -1,6 +1,6 @@
-import 'dotenv/config';
 import { promises as fs } from 'fs';
 import path from 'path';
+import { title } from 'process';
 
 const dataFileBasePath = process.env.DATA_FILE_BASEPATH;
 const dataFilePath = `${dataFileBasePath}post.json`;
@@ -32,7 +32,7 @@ const footerAggregated = async (postsData) => {
       if (domain !== 'category' && domain !== 'post_tag') {
         return; // Drops out of this specific forEach loop iteration
       }
-      
+
       const text = item["#text"];
       const slug = item["@_nicename"];
 
@@ -59,35 +59,40 @@ const footerAggregated = async (postsData) => {
 }
 
 const footerData = async () => {
-// 1. Load your converted WordPress JSON files
-    const postsData = await jsonData(dataFilePath); // Assuming this is your main posts data file
-    const aggregatedData = await footerAggregated(postsData);
-    const categoriesData = aggregatedData.categories;
-    const tagsData = aggregatedData.tags;
-    
-    // 2. Extract recent posts (assuming array is ordered newest to oldest, get first 3)
-    const recentPosts = postsData.slice(0, 10);
+  // 1. Load your converted WordPress JSON files
+  const postsData = await jsonData(dataFilePath); // Assuming this is your main posts data file
+  const aggregatedData = await footerAggregated(postsData);
+  const categoriesData = aggregatedData.categories;
+  const tagsData = aggregatedData.tags;
 
-    // 3. Extract topics/categories
-    const categories = categoriesData;
+  // 2. Extract recent posts (assuming array is ordered newest to oldest, get first 3)
+  const recentPosts = postsData.map(post => ({
+    title: post.title
+    , slug: post['wp:post_name']
+    , date: post['wp:post_date']
+  })).sort((b, a) => new Date(a.date) - new Date(b.date))
+    .slice(0, 10);
 
-    // 4. Extract tags for your tag cloud
-    const tags = tagsData;
+  // 3. Extract topics/categories
+  const categories = categoriesData;
 
-    // 5. Dynamic data (Lyrics & Radio Stations)
-    const dynamicLyrics = "It doesn't matter if we all die... Ambition in the back of a black car"; // The Cure - One Hundred Years
-    const favoriteRadios = [
-      { name: 'KINK', url: 'https://kink.nl' },
-      { name: 'Radio Veritas', url: '#' } // Add more favorites here
-    ];
+  // 4. Extract tags for your tag cloud
+  const tags = tagsData;
 
-    return {
-      recentPosts,
-      categories,
-      tags,
-      dynamicLyrics,
-      favoriteRadios
-    };
+  // 5. Dynamic data (Lyrics & Radio Stations)
+  const dynamicLyrics = "It doesn't matter if we all die... Ambition in the back of a black car"; // The Cure - One Hundred Years
+  const favoriteRadios = [
+    { name: 'KINK', url: 'https://kink.nl' },
+    { name: 'Radio Veritas', url: '#' } // Add more favorites here
+  ];
+
+  return {
+    recentPosts,
+    categories,
+    tags,
+    dynamicLyrics,
+    favoriteRadios
+  };
 }
 
-export default footer;
+export default footerData;

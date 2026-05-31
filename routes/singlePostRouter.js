@@ -1,5 +1,7 @@
 import { Router } from 'express'
 import fs from 'fs';
+import footer from './footer.js';
+
 const router = Router({ mergeParams: true })
 
 const dataFileBasePath = process.env.DATA_FILE_BASEPATH;
@@ -57,7 +59,6 @@ const singlePost = async (slug) => {
                 post_name: nextPost['wp:post_name']
             } : null
         }
-        console.log(`Post data for slug "${slug}":`, postData); // Debug log to verify the structure of postData
         return postData; // Return the single post object or null if not found
     }
     catch (error) {
@@ -70,11 +71,13 @@ const singlePost = async (slug) => {
 router.get('/', async (req, res, next) => {
     const postSlug = req.params.slug;
     const postData = await singlePost(req.params.slug);
+    const footerData = await footer();
+    console.log(footerData);
     if (!postData) {
         next(); // Pass control to the next middleware (which should be the 404 handler)
         return; // Ensure we don't continue to render if postData is null
     }
-    res.render('post', { title: "Johannes Kalma", post: postData });
+    res.render('post', { title: "Johannes Kalma", post: postData, footer: footerData });
 });
 
 export default router;

@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import fs from 'fs';
 const router = Router()
+import footer from './footer.js';
 
 //const dataFileBasePath = '/home/jkalma/Git/johanneskalma.nl/wp-export/split_output/';
 const dataFileBasePath = process.env.DATA_FILE_BASEPATH;
@@ -98,7 +99,8 @@ async function Pagination(pageParam) {
 router.get('/', async (req, res) => {
     const postData = await frontpageData(1);
     const paginationData = await Pagination(1);
-    const footerData = await footerData();
+    const footerData = await footer();
+    console.log("Footer data for front page:", footerData); // Debug log to verify footer data structure
     res.render('index', {
         title: "My Blog", 
         posts: postData, 
@@ -111,6 +113,7 @@ router.get('/:page', async (req, res) => {
     const page = parseInt(req.params.page, 10);
     const paginationData = await Pagination(page);
     const postData = await frontpageData(page);
+    const footerData = await footer();
 
     if (!postData || postData.length === 0) {
         return res.status(404).render('404', { url: req.originalUrl, message: `No posts found for page ${page}.` });
@@ -119,7 +122,8 @@ router.get('/:page', async (req, res) => {
     res.render('index', {
         title: "Johannes Kalma", 
         posts: postData, 
-        pagination: paginationData
+        pagination: paginationData,
+        footer: footerData
     });
 });
 
