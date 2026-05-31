@@ -98,10 +98,12 @@ async function Pagination(pageParam) {
 router.get('/', async (req, res) => {
     const postData = await frontpageData(1);
     const paginationData = await Pagination(1);
+    const footerData = await footerData();
     res.render('index', {
         title: "My Blog", 
         posts: postData, 
-        pagination: paginationData
+        pagination: paginationData,
+        footer: footerData
     });
 });
 
@@ -115,7 +117,7 @@ router.get('/:page', async (req, res) => {
     }
 
     res.render('index', {
-        title: "My Blog", 
+        title: "Johannes Kalma", 
         posts: postData, 
         pagination: paginationData
     });

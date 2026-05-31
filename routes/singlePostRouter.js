@@ -74,7 +74,7 @@ router.get('/', async (req, res, next) => {
         next(); // Pass control to the next middleware (which should be the 404 handler)
         return; // Ensure we don't continue to render if postData is null
     }
-    res.render('post', { title: "My Blog", post: postData });
+    res.render('post', { title: "Johannes Kalma", post: postData });
 });
 
 export default router;

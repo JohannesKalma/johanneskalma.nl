@@ -104,3 +104,11 @@ nav.pagination .pagination-center{
 div.has-background {
     padding: 10px;
 }
+
+footer .site-info {
+    display: flex;
+    background-color: #3a3a3a;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #666;
+}
