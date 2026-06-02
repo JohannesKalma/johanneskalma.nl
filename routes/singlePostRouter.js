@@ -19,6 +19,12 @@ const singlePost = async (slug) => {
         const posts = await jsonData();
         const postIndex = posts.findIndex((item) => item['wp:post_name'] === slug);
 
+        console.log(`Looking for post with slug: ${slug}. Found at index: ${postIndex}`); // Debug log to verify slug and index
+
+        if (!postIndex || postIndex === '' || postIndex < 0) {
+           return null; // Return null if post not found, which will trigger 404 in route handler
+        }
+
         const post = posts[postIndex];
         const previousPost = posts[postIndex - 1]; // Left neighbor
         const nextPost = posts[postIndex + 1]; // Right neighbor
@@ -51,12 +57,10 @@ const singlePost = async (slug) => {
 /*single post route*/
 router.get('/', async (req, res, next) => {
     const postData = await singlePost(req.params.slug);
-    const footerData = await footer();
     if (!postData) {
-        next(); // Pass control to the next middleware (which should be the 404 handler)
-        return; // Ensure we don't continue to render if postData is null
+        return next(); // Pass control to the next middleware (which should be the 404 handler)
     }
-    res.render('post', { title: "Johannes Kalma", post: postData, footer: footerData });
+    res.render('post', { post: postData, footer: await footer() });
 });
 
 export default router;

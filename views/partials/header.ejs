@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= process.env.TITLE %>
+    </title>
+    <link rel="icon" href="./images/icon-32x32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://s3.oarsnet.nl/lib/2867/css/2867.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <nav class="top-nav">
+            <div class="site-branding">
+                    <a href="/"><%= process.env.TITLE %></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="/about">About</a></li>
+                <!--<li class="nav-item"><a href="/contact">Contact</a></li>-->
+                <li class="nav-item">
+                    <a href="#">Others ▼</a>
+                    <div class="dropdown-menu">
+                        <a href="https://voetreflextherapie-zeist.nl">Antine Breimer Voetreflextherapie Zeist</a>
+                        <a href="https://u97.nl">U97</a>
+                        <a href="https://knilluz.b5t.nl">Archive</a>
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+    </header>

@@ -6,10 +6,8 @@ import createError from 'http-errors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-//dotenv.config();
-
 const app = express();
-const PORT = 3335;
+const PORT = process.env.PORT || 3335;
 
 // Recreating __dirname for ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -19,23 +17,12 @@ const __dirname = path.dirname(__filename);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files from the 'public' directory
+// Serve static files from the 'public' directory, skipping the default index file handling to allow for custom routing
 app.use(express.static(path.join(__dirname, 'public'), { index: false }));
 
 // MIDDLEWARE: HTTP Request Logger
 app.use(morgan('dev'));
 
-/*
-// -----------------------------------------
-// DATA PROCESSING FUNCTIONS (from wp-filters.js)
-// -----------------------------------------
-
-const tagRouter = './routes/tagRouter.js';
-
-app.use('/tag','tagRouter') //:slug
-app.use('/topics','topicsRouter') //:slug -- categories
-
-*/
 import frontpageRouter from './routes/frontpageRouter.js';
 import singlePostRouter from './routes/singlePostRouter.js';
 import taxonomyRouter from './routes/taxonomyRouter.js';
@@ -48,7 +35,6 @@ app.use('/:slug',singlePostRouter);
 // -----------------------------------------
 // ERROR HANDLING MIDDLEWARE
 // -----------------------------------------
-
 // Catch 404
 app.use((req, res, next) => {
     next(createError(404, `The pathway '${req.originalUrl}' was not found.`));

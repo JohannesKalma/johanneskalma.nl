@@ -79,7 +79,7 @@ router.get('/', async (req, res) => {
     const postData = await frontpageData(1);
     const paginationData = await Pagination(1);
     const footerData = await footer();
-    console.log("Footer data for front page:", footerData); // Debug log to verify footer data structure
+
     res.render('index', {
         title: "Johannes Kalma", 
         posts: postData, 
@@ -89,19 +89,18 @@ router.get('/', async (req, res) => {
 });
 
 /*pagination route with page parameter /page/:page*/
-router.get('/:page', async (req, res) => {
+router.get('/:page', async (req, res, next) => {
     const page = parseInt(req.params.page, 10);
     const paginationData = await Pagination(page);
     const postData = await frontpageData(page);
     const footerData = await footer();
 
     if (!postData || postData.length === 0) {
-        return res.status(404).render('404', { url: req.originalUrl, message: `No posts found for page ${page}.` });
+        return next(); // Pass control to the next middleware (which should be the 404 handler)
     }
 
-    res.render('index', {
-        title: "Johannes Kalma", 
-        posts: postData, 
+    res.render('index', { 
+        posts: post, 
         pagination: paginationData,
         footer: footerData
     });

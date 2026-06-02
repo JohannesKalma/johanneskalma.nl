@@ -35,8 +35,12 @@ router.get('/', async (req, res, next) => {
         link: post.link,
         content: post['content:encoded'] || '',
     })).sort((b, a) => a.post_date.localeCompare(b.post_date))
-       //.slice(0, 10); // Limit to specified range for front page
-  
+    //.slice(0, 10); // Limit to specified range for front page
+
+    if (filteredPosts.length === 0) {
+        return next(); // Pass control to the next middleware (which should be the 404 handler)
+    }
+
     res.render('taxonomy', {
         title: `Posts with ${filterType}: ${slug}`,
         posts: filteredPosts,
