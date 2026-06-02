@@ -1,28 +1,9 @@
 import { Router } from 'express'
 import fs from 'fs';
 import footer from './footer.js';
+import {jsonData} from './postData.js';
 
 const router = Router({ mergeParams: true })
-
-const dataFileBasePath = process.env.DATA_FILE_BASEPATH;
-//console.log(`Using data file base path: ${dataFileBasePath}`); // Debug log to confirm the path being used
-const dataFilePath = `${dataFileBasePath}post.json`;
-
-const fileData = async () => {
-    return new Promise((resolve, reject) => {
-        fs.readFile(dataFilePath, 'utf-8', (err, data) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(data);
-            }
-        });
-    });
-}
-
-const jsonData = async () => {
-    return JSON.parse(await fileData());
-}
 
 const mapItems = async (items) => {
 
@@ -67,12 +48,10 @@ const singlePost = async (slug) => {
         return { title: 'Error', content: 'Failed to load', author: 'Unknown', post_date: 'Unknown' };
     }
 }
-
+/*single post route*/
 router.get('/', async (req, res, next) => {
-    const postSlug = req.params.slug;
     const postData = await singlePost(req.params.slug);
     const footerData = await footer();
-    console.log(footerData);
     if (!postData) {
         next(); // Pass control to the next middleware (which should be the 404 handler)
         return; // Ensure we don't continue to render if postData is null

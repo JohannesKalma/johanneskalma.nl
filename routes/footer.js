@@ -69,8 +69,8 @@ const footerData = async () => {
   const recentPosts = postsData.map(post => ({
     title: post.title
     , slug: post['wp:post_name']
-    , date: post['wp:post_date']
-  })).sort((b, a) => new Date(a.date) - new Date(b.date))
+    , post_date: post['wp:post_date']
+  })).sort((b, a) => a.post_date.localeCompare(b.post_date))
     .slice(0, 10);
 
   // 3. Extract topics/categories

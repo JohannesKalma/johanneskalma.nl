@@ -38,8 +38,10 @@ app.use('/topics','topicsRouter') //:slug -- categories
 */
 import frontpageRouter from './routes/frontpageRouter.js';
 import singlePostRouter from './routes/singlePostRouter.js';
+import taxonomyRouter from './routes/taxonomyRouter.js';
 
 app.use('/page',frontpageRouter);
+app.use(['/tag/:slug', '/topic/:slug','/category/:slug'], taxonomyRouter);
 app.get('/',frontpageRouter);
 app.use('/:slug',singlePostRouter);
 

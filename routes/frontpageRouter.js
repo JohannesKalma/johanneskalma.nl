@@ -1,29 +1,7 @@
 import { Router } from 'express'
-import fs from 'fs';
 const router = Router()
 import footer from './footer.js';
-
-//const dataFileBasePath = '/home/jkalma/Git/johanneskalma.nl/wp-export/split_output/';
-const dataFileBasePath = process.env.DATA_FILE_BASEPATH;
-//console.log(`Using data file base path: ${dataFileBasePath}`); // Debug log to confirm the path being used
-
-const dataFilePath = `${dataFileBasePath}post.json`;
-
-const fileData = async () => {
-    return new Promise((resolve, reject) => {
-        fs.readFile(dataFilePath, 'utf-8', (err, data) => {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(data);
-            }
-        });
-    });
-}
-
-const jsonData = async () => {
-    return JSON.parse(await fileData());
-}
+import {jsonData} from './postData.js';
 
 const mapItems = async (items, page) => {
     const postsPerPage = 10;
@@ -96,19 +74,21 @@ async function Pagination(pageParam) {
     };
 }
 
+/*frontpage route*/
 router.get('/', async (req, res) => {
     const postData = await frontpageData(1);
     const paginationData = await Pagination(1);
     const footerData = await footer();
     console.log("Footer data for front page:", footerData); // Debug log to verify footer data structure
     res.render('index', {
-        title: "My Blog", 
+        title: "Johannes Kalma", 
         posts: postData, 
         pagination: paginationData,
         footer: footerData
     });
 });
 
+/*pagination route with page parameter /page/:page*/
 router.get('/:page', async (req, res) => {
     const page = parseInt(req.params.page, 10);
     const paginationData = await Pagination(page);
