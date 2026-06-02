@@ -26,8 +26,10 @@ app.use(morgan('dev'));
 import frontpageRouter from './routes/frontpageRouter.js';
 import singlePostRouter from './routes/singlePostRouter.js';
 import taxonomyRouter from './routes/taxonomyRouter.js';
+import aboutRouter from './routes/aboutRouter.js';
 
 app.use('/page',frontpageRouter);
+app.use('/about',aboutRouter);
 app.use(['/tag/:slug', '/topic/:slug','/category/:slug'], taxonomyRouter);
 app.get('/',frontpageRouter);
 app.use('/:slug',singlePostRouter);

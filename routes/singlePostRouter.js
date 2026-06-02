@@ -1,5 +1,4 @@
 import { Router } from 'express'
-import fs from 'fs';
 import footer from './footer.js';
 import {jsonData} from './postData.js';
 
