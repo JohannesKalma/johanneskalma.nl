@@ -100,7 +100,7 @@ router.get('/:page', async (req, res, next) => {
     }
 
     res.render('index', { 
-        posts: post, 
+        posts: postData, 
         pagination: paginationData,
         footer: footerData
     });

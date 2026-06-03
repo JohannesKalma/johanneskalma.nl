@@ -15,7 +15,7 @@
 				</div>
 			</div>
 
-			<div class="footer-section-middle">
+			<div class="footer-section-right">
                 <strong>Recent Posts</strong>
 				<% if (footer.recentPosts && footer.recentPosts.length > 0) { %>
 					<ul class="recent-posts-list">
@@ -26,8 +26,9 @@
 				<% } else { %>
 					<p>No recent posts available.</p>
 				<% } %>
-				<br>
-				<strong>Categories</strong>
+			</div>
+			<div class="footer-section-right">
+			<strong>Categories</strong>
 				<% if (footer.categories && footer.categories.length > 0) { %>
 					<ul class="category-list">
 						<% footer.categories.forEach(category => { %>
