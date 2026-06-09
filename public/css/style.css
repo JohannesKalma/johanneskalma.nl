@@ -15,12 +15,42 @@ figcaption {
     color: #404040;
 }
 
+.post{ 
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.post:not(.single)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 40%;
+  height: 1px;
+  background-color: #7c7c7c;
+}
+
 .post-meta {
     font-size: 0.75rem;
     font-weight: 700;
     margin: 0.75rem 0 0 0;
     color: #999;
 }
+
+.post-taxonomy {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 1rem;
+}
+
+.post-taxonomy span {
+    display: block;
+}
+
+
 
 h1.post-title,
 h2.post-title {
