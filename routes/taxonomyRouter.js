@@ -41,7 +41,7 @@ router.get('/', async (req, res, next) => {
     }
 
     res.render('taxonomy', {
-        title: `Posts with ${filterType}: ${slug}`,
+        taxonomyName: `Posts with ${filterType}: ${slug}`,
         posts: filteredPosts,
         footer: await footer()
     });
