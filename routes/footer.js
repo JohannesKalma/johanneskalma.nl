@@ -67,11 +67,11 @@ const footerData = async () => {
 
   // 2. Extract recent posts (assuming array is ordered newest to oldest, get first 3)
   const recentPosts = postsData.map(post => ({
-    title: post.title
-    , slug: post['wp:post_name']
-    , post_date: post['wp:post_date']
-  })).sort((b, a) => a.post_date.localeCompare(b.post_date))
-    .slice(0, 10);
+    title: post.title,
+    slug: post['wp:post_name'],
+    post_date: post['wp:post_date']
+  })).sort((a, b) => b.post_date.localeCompare(a.post_date))
+    .slice(0,10); // Get the 10 most recent posts
 
   // 3. Extract topics/categories
   const categories = categoriesData;
