@@ -2,19 +2,23 @@
 
     <main class="site-main container">
         <section class="site-content">
-            <article class="post">
+            <article class="post single">
                 <h2 class="post-title">
                     <a href="/<%= post.post_name %>">
                         <%= post.title %>
                     </a>
                 </h2>
                 <div class="post-meta">
-                    <span class="author">By <%= post.author %></span>
-                    <time>on <%= post.post_date %></time>
+                    <span class="author"><%= post.post_date %></time>
                 </div>
                 <p><%- post.content %></p>
             </article>
         </section>
+        <nav class="post-taxonomy">
+            <span><strong>U</strong> <%= post.author %></span>
+            <span><strong>C</strong> <%= post.taxonomy.categories %></span>
+            <span><strong>T</strong> <%= post.taxonomy.tags %></span>
+        </nav>
     </main>
 
     <nav class="post-navigation container">

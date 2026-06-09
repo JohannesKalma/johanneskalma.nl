@@ -1,6 +1,6 @@
 import { Router } from 'express'
 import footer from './footer.js';
-import {jsonData} from './postData.js';
+import { jsonData } from './postData.js';
 
 const router = Router({ mergeParams: true })
 
@@ -21,12 +21,22 @@ const singlePost = async (slug) => {
         console.log(`Looking for post with slug: ${slug}. Found at index: ${postIndex}`); // Debug log to verify slug and index
 
         if (!postIndex || postIndex === '' || postIndex < 0) {
-           return null; // Return null if post not found, which will trigger 404 in route handler
+            return null; // Return null if post not found, which will trigger 404 in route handler
         }
 
         const post = posts[postIndex];
         const previousPost = posts[postIndex - 1]; // Left neighbor
         const nextPost = posts[postIndex + 1]; // Right neighbor
+
+        console.log(post); // Debug log to verify post data
+
+        const postCategory = Array.isArray(post.category) ? post.category : [post.category];
+
+        const { categories, tags } = postCategory.reduce((acc, item) => {
+            if (item['@_domain'] === 'category') acc.categories.push(item['#text']);
+            if (item['@_domain'] === 'post_tag') acc.tags.push(item['#text']);
+            return acc;
+        }, { categories: [], tags: [] });
 
         const postData = {
             title: post.title,
@@ -43,7 +53,11 @@ const singlePost = async (slug) => {
             nextPost: nextPost ? {
                 title: nextPost.title,
                 post_name: nextPost['wp:post_name']
-            } : null
+            } : null,
+            taxonomy: {
+                categories: categories.join(', '),
+                tags: tags.join(', ')
+            }
         }
         return postData; // Return the single post object or null if not found
     }

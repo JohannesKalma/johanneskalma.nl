@@ -1,7 +1,7 @@
 <%- include('partials/header') %>
 
     <main class="site-main container">
-        <h1 class="page-title"><%= process.env.TITLE %></h1>
+        <h1 class="page-title"><%= taxonomyName %></h1>
         <section class="site-content">
             <% posts?.forEach(item=> { %>
                 <article class="post">
@@ -17,5 +17,6 @@
                 <% }) %>
         </section>
     </main>
+
 
 <%- include('partials/footer') %>
